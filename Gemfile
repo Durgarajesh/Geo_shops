@@ -52,5 +52,8 @@ gem 'quiet_assets'
 gem 'bootstrap-sass'
 gem 'simple_form'
 
+gem 'carrierwave'
+gem 'mini_magick'
+
 
 

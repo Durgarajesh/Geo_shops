@@ -3,9 +3,10 @@
 		Register your shop
 	.row
 		.col-md-6
-			= simple_form_for @shop do |f|
+			= simple_form_for @shop,  multiple: true do |f|
 				= f.input :name
 				= f.input :address, as: :text
 				= f.input :description, as: :text
+				= file_field_tag("images[]", type: :file, multiple: true)
 				= f.button :submit
 		.col-md-6
