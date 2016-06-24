@@ -50,6 +50,7 @@ gem 'haml'
 gem 'quiet_assets'
 
 gem 'bootstrap-sass'
+gem 'simple_form'
 
 
 

@@ -1,0 +1,11 @@
+.well
+	.h2.text-center
+		Register your shop
+	.row
+		.col-md-6
+			= simple_form_for @shop do |f|
+				= f.input :name
+				= f.input :address, as: :text
+				= f.input :description, as: :text
+				= f.button :submit
+		.col-md-6

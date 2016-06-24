@@ -13,10 +13,11 @@
         #navbar.navbar-collapse.collapse
           %ul.nav.navbar-nav.navbar-right 
             %li
-              %a{:href => "#"} Register Shop
+              %a{href: new_shop_url} Register Shop
   %br/
   .row
     .col-md-2
-    .col-md-8      
+    .col-md-8
+      = render partial: 'layouts/flash_messages', flash: flash      
       = yield
     .col-md-2
