@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title GeoShops
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %nav.navbar-light{style: "background-color: #e3f2fd;"}
+      .container-fluid
+        .navbar-header
+          %a.navbar-brand{href: root_path} GEO SHOPS
+        #navbar.navbar-collapse.collapse
+          %ul.nav.navbar-nav.navbar-right 
+            %li
+              %a{:href => "#"} Register Shop
+  %br/
+  .row
+    .col-md-2
+    .col-md-8      
+      = yield
+    .col-md-2
