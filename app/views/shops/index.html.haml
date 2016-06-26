@@ -1,1 +1,22 @@
 .well
+	%h3.text-center
+		List of shops
+	%table.table.table-bordered
+		%thead
+			%td Id
+			%td Shop Name
+			%td Address
+			%td Longitude
+			%td Latitude
+		- @shops.each_with_index do |s, i|
+			%tr
+				%td 
+					= s.id
+				%td
+					= s.name
+				%td 
+					= image_tag s.image.thumb.url if s.image.present?
+				%td
+					= s.longitude
+				%td 
+					= s.latitude

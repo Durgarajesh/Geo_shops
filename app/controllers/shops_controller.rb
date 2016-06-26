@@ -16,9 +16,13 @@ class ShopsController < ApplicationController
 		@shops = Shop.all
 	end
 
+	def locations
+		@shop = Shop.last
+	end
+
 	private
 
 	def shop_params
-		params.require(:shop).permit(:name, :address, :description, photos: {})
+		params.require(:shop).permit(:name, :address, :description, :image, :latitude, :longitude)
 	end
 end

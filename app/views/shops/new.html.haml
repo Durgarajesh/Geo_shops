@@ -2,11 +2,17 @@
 	.h2.text-center
 		Register your shop
 	.row
-		.col-md-6
+		.col-md-4
 			= simple_form_for @shop,  multiple: true do |f|
 				= f.input :name
 				= f.input :address, as: :text
 				= f.input :description, as: :text
-				= file_field_tag("images[]", type: :file, multiple: true)
+				= f.file_field :image
+				%br/
+				= f.input :longitude
+				= f.input :latitude
 				= f.button :submit
-		.col-md-6
+		.col-md-8
+			.card
+				.card-block
+					#map

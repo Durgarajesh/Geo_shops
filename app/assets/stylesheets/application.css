@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+#map {
+  height: 450px;
+}
+
+.card {
+  margin-top: 20px;
+}

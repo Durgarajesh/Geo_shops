@@ -1,9 +1,12 @@
 class Shop < ActiveRecord::Base
-	has_many  :photos, inverse_of: :shop, dependent: :destroy
-	# enable nested attributes for photos through shop class
-	accepts_nested_attributes_for :photos, allow_destroy: true
-
 	validates :name, presence: true
     validates :address, presence: true
     validates :description, presence: true
+    validates :latitude, presence: true
+    validates :longitude, presence: true
+
+    geocoded_by :address, latitude: :lat, longitude: :lon
+    after_validation :geocode
+
+    mount_uploader :image, ImageUploader
 end
